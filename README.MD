@@ -22,3 +22,33 @@ The following table shows meaning of different color for 14-day rate of infectio
 | 🔴 | 240< … ≤480 |  4.0< … ≤8.0  |
 | 🟣 | 480< … ≤960 |  8.0< … ≤16.0 |
 | 🔵 | 960<        | 16.0<         |
+
+### Example
+
+Example configuration file:
+
+```ini
+[countries]
+AUS
+CAN
+GBR = Great Britain
+NZL
+USA = Great America
+```
+
+Default command line execution of the script:
+
+```bash
+./covid.py
+```
+
+And the example output using the example configuration above:
+
+```
+from week 2021-06 to week 2021-07
+415➚531🟣 13.0➚14.4🟣 Great America
+325➘229🟠 16.2➘11.4🟣 Great Britain
+115➘110🟡 3.1➘2.4🟠 Canada
+1➙1🟢 0.0➙0.0🟢 New Zealand
+0➙0🟢 0.0➙0.0🟢 Australia
+```
